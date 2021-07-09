@@ -63,3 +63,10 @@ C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\runtimes\win-arm\nativ
 C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\Desktop\demo\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
