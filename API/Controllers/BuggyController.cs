@@ -1,8 +1,9 @@
 using API.Data;
-using API.Entities;
 using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using API.Entities;
+
 namespace API.Controllers
 {
     public class BuggyController : BaseApiController

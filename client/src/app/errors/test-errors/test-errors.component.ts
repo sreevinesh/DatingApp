@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-errors.component.css']
 })
 export class TestErrorsComponent implements OnInit {
-  baseUrl = 'http://localhost:5001/api/';
+  baseUrl = 'http://localhost:5003/api/';
   validationErrors: string[] = [];
 
   constructor(private http: HttpClient) { }
@@ -17,6 +17,7 @@ export class TestErrorsComponent implements OnInit {
 
   get404Error() {
     this.http.get(this.baseUrl + 'buggy/not-found').subscribe(response => {
+      debugger
       console.log(response);
       
     }, error => {

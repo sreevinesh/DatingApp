@@ -41,6 +41,12 @@ namespace API.Controllers
             };
 
         }
+
+        public string GetMyName()
+        {
+            return "Hello World";
+        }
+
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
