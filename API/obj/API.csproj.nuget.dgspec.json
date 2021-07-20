@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\demos\\DatingApp\\API\\API.csproj": {}
+    "D:\\demos\\DatingApp\\api\\API.csproj": {}
   },
   "projects": {
-    "D:\\demos\\DatingApp\\API\\API.csproj": {
+    "D:\\demos\\DatingApp\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\demos\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "D:\\demos\\DatingApp\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\demos\\DatingApp\\API\\API.csproj",
+        "projectPath": "D:\\demos\\DatingApp\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Thomsun\\.nuget\\packages\\",
-        "outputPath": "D:\\demos\\DatingApp\\API\\obj\\",
+        "outputPath": "D:\\demos\\DatingApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

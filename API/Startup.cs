@@ -38,7 +38,13 @@ namespace API
         {
             services.AddApplicationServices(_config);
             services.AddControllers();
-            services.AddCors();
+           
+services.AddCors(o => o.AddPolicy("AllowAllOrigins", builder =>
+{
+builder.AllowAnyOrigin()
+.AllowAnyMethod()
+.AllowAnyHeader();
+}));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });

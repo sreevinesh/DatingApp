@@ -41,9 +41,11 @@ export class AccountService {
     )
   }
 
-  setCurrentUser(user: User){
-    localStorage.setItem('user', JSON.stringify(user));
-    this.currentUserSource.next(user);
+  setCurrentUser(user: User) {
+    if (Object.keys(user).length !== 0) {
+      localStorage.setItem('user', JSON.stringify(user));
+      this.currentUserSource.next(user);
+    }
   }
 
   logout(){
