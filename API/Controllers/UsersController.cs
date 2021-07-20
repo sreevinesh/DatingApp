@@ -1,21 +1,22 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using API.Data;
 using API.DTOs;
 using API.Entities;
-using System.Security.Claims;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API.Controllers
 {
-    //[ApiController]
+    // [ApiController]
     //[Route("api/[controller]")]
-  // [Authorize]
+    //[Authorize]
 
     public class UsersController : BaseApiController
     {
@@ -61,7 +62,8 @@ namespace API.Controllers
         public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
         {
             var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var user=await _userRepository.GetUserByUsernameAsync(username);
+            
+            var user=await _userRepository.GetUserByUsernameAsync("lisa");
 
             _mapper.Map(memberUpdateDto,user);
 
@@ -71,6 +73,21 @@ namespace API.Controllers
 
             return BadRequest("failed to update user");
         }
+        //  [HttpPut]
+        // public async Task<ActionResult> UpdateUser(AppUser memberUpdateDto)
+        // {
+
+        //     var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        //     var user=await _userRepository.GetUserByUsernameAsync(username);
+
+        //     _mapper.Map(memberUpdateDto,user);
+
+        //     _userRepository.Update(user);
+
+        //     if(await _userRepository.SaveAllAsync())  return NoContent();
+
+        //     return BadRequest("failed to update user");
+        // }
 
     }
 }

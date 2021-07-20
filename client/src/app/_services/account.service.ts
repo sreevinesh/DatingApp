@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment.prod';
+import { User } from '../_models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class AccountService {
       if(user) {
         localStorage.setItem('user', JSON.stringify(user)|| '');
         this.currentUserSource.next(user);
-        
+
       }
     })
     )
@@ -35,12 +36,13 @@ export class AccountService {
           localStorage.setItem('user',JSON.stringify(user));
           this.currentUserSource.next(user);
         }
-        
+
       })
     )
   }
 
-  setCurrentUser(user: any){
+  setCurrentUser(user: User){
+    localStorage.setItem('user', JSON.stringify(user));
     this.currentUserSource.next(user);
   }
 
@@ -49,7 +51,7 @@ export class AccountService {
     this.currentUserSource.next(null!);
   }
 }
-    
-  
-    
+
+
+
 

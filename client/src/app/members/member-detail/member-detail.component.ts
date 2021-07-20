@@ -13,6 +13,7 @@ export class MemberDetailComponent implements OnInit {
   member: Member[] | any;
   galleryOptions: NgxGalleryOptions[] | any;
   galleryImages: NgxGalleryImage[] | any;
+  editForm: any;
 
 
   constructor(private memberService: MembersService, private route: ActivatedRoute) { }
@@ -30,12 +31,14 @@ export class MemberDetailComponent implements OnInit {
           preview: false
         }
       ]
-      
+
   }
 
-  getImages():NgxGalleryImage[] {
+  getImages():NgxGalleryImage[]
+   {
     const imageUrls =[];
-    for (const photo of this.member.photo) {
+    for (const photo of this.member.photos)
+    {
       imageUrls.push({
         small: photo?.url,
         medium: photo?.url,
@@ -46,7 +49,7 @@ export class MemberDetailComponent implements OnInit {
   }
 
   loadMember() {
-    this.memberService.getMember(this.route.snapshot.paramMap.get('username')||"").subscribe(member => {
+    this.memberService.getMember(this.route.snapshot.paramMap.get('username')|| '{}').subscribe(member => {
       this.member = member;
       this.galleryImages = this.getImages();
     })
